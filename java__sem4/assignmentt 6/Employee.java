@@ -3,7 +3,7 @@ import java.util.*;
 public abstract class Employee 
 {
     private String name, address;
-    protected int basicSalary;
+    static protected int basicSalary;
     public String getName(){
         return name;
     }
@@ -26,11 +26,14 @@ public abstract class Employee
 
     }
     public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
         NormalEmployee ne=new NormalEmployee();
-        ne.basicSalary=1000;
+        System.out.println("Enter his basic salary");
+        int sal=sc.nextInt();
+        ne.setBasicSalary(sal);
         ne.getMonthlySalary();
         BonusEmployee be= new BonusEmployee();
-        be.basicSalary=1000;
+        be.setBasicSalary(sal);
         be.getMonthlySalary();
     }
 
@@ -40,7 +43,7 @@ class NormalEmployee extends Employee{
 
     public void getMonthlySalary() {
         
-        System.out.println(basicSalary);
+        System.out.println("Normal Employee="+basicSalary);
     }    
 }
 class BonusEmployee extends Employee{
@@ -49,7 +52,7 @@ class BonusEmployee extends Employee{
         System.out.println("Enter bonus you wish to give");
         Scanner sc = new Scanner(System.in);
         int bonus=sc.nextInt();
-        System.out.println(basicSalary+bonus); 
+        System.out.println("Bonus Employee"+(basicSalary+bonus)); 
     }
 
 }

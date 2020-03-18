@@ -20,7 +20,7 @@ class Part4 extends Student implements Exam {
     }
 
     public void percent_call() {
-        System.out.println("Percentage =" + (double)(mark1+mark2)/200);
+        System.out.println("Percentage =" + (double)(mark1+mark2)/2 + "%");
     }
     public static void main(String[] args) {
         Part4 p4=new Part4();
