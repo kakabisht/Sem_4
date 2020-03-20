@@ -73,10 +73,10 @@ class Part3A
 {
         public static void main(String args[ ])
         {
-                System.out.print("Enter size of Stack");
-                Scanner sc =new Scanner(System.in);
-                int x= sc.nextInt();
-                FixedStack fs=new FixedStack(x);
+              //  System.out.print("Enter size of Stack");
+                //Scanner sc =new Scanner(System.in);
+                //int x= sc.nextInt();
+                FixedStack fs=new FixedStack(2);
                 DynStack ds=new DynStack(5);
                 stkA mystk;
                 mystk=fs;

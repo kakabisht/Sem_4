@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+
+class Person{
+    int Notstatic=0;
+    String name;
+    int age;
+    double salary ;
+    Person(){
+        this.name="";
+        this.age=0;
+        this.salary=0;
+        Notstatic+=1;
+    }
+    Person(String name , int age , double salary){
+        this.name=name;
+        this.age=age;
+        this.salary=salary;
+        Notstatic+=3;
+    }
+
+    Person(String name , double salary){
+        this.name=name;
+        this.salary=salary;
+        Notstatic+=2;
+    }
+
+    void display()
+    {
+        System.out.println("Name="+name+"Age="+age+"Salary="+salary);
+        System.out.println("Notstatic value \n1 for default constructor called \n 2 for 2 paratmeters object \n 3 for 3 parameters object = \n "+Notstatic);
+    }
+}
+public class Instance {
+
+    public static void main(String[] args) {
+        
+        String name ;
+        int age;
+        double salary ;
+        System.out.println("Welcome to Person Database");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name");
+        name=sc.nextLine();
+        System.out.println("Enter the age");
+        age=sc.nextInt();
+        System.out.println("Enter the salary");
+        salary=sc.nextDouble();
+        Person pq=new Person(name, age, salary);
+        pq.display();
+        System.out.println("\n New Object \n");
+        Person pe=new Person(name,salary);
+        pe.display();
+    
+    }
+    
+}
