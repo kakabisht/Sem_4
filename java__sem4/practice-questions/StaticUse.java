@@ -33,7 +33,7 @@ class Person{
     void display()
     {
         System.out.println("\nName="+name+"\nAge="+age+"\nSalary="+salary);
-        System.out.println(" \nNotstatic value \n1 for default constructor called \n 2 for 2 paratmeters object \n 3 for 3 parameters object = \n "+Notstatic);
+        System.out.println(" \nNotstatic value of \n1 for default constructor called \n 2 for 2 paratmeters object \n 3 for 3 parameters object = \n "+Notstatic);
     }
 }
 public class StaticUse {
@@ -43,7 +43,6 @@ public class StaticUse {
         String name ;
         int age;
         double salary ;
-        System.out.println("Welcome to Person Database");
         Scanner sc = new Scanner(System.in);
         System.out.println("\nEnter the name");
         name=sc.nextLine();

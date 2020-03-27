@@ -27,8 +27,8 @@ class Person{
 
     void display()
     {
-        System.out.println("Name="+name+"Age="+age+"Salary="+salary);
-        System.out.println("Notstatic value \n1 for default constructor called \n 2 for 2 paratmeters object \n 3 for 3 parameters object = \n "+Notstatic);
+        System.out.println("\nName="+name+"\nAge="+age+"\nSalary="+salary);
+        System.out.println("\nNotstatic value \n1 for default constructor called \n 2 for 2 paratmeters object \n 3 for 3 parameters object = \t "+Notstatic);
     }
 }
 public class Instance {
@@ -40,11 +40,11 @@ public class Instance {
         double salary ;
         System.out.println("Welcome to Person Database");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the name");
+        System.out.println("\nEnter the name");
         name=sc.nextLine();
-        System.out.println("Enter the age");
+        System.out.println("\nEnter the age");
         age=sc.nextInt();
-        System.out.println("Enter the salary");
+        System.out.println("\nEnter the salary");
         salary=sc.nextDouble();
         Person pq=new Person(name, age, salary);
         pq.display();

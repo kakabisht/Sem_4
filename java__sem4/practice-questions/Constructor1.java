@@ -36,10 +36,13 @@ public class Constructor1 {
         x=sc.nextInt();y=sc.nextInt();
         System.out.println("Enter radious of circle ");
         r=sc.nextInt();  
+        System.out.println(" \n3 parameters of object\\n");
         Circle ci =new Circle(x,y,r);
         ci.display();
+        System.out.println(" \n0 parameters of object\\n");
         Circle ci1 =new Circle();
         ci1.display();
+        System.out.println(" \n2 parameters of object\\n");
         Circle ci2 =new Circle(x,r);
         ci2.display();
         
